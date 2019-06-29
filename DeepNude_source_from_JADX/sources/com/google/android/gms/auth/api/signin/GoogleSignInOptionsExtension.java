@@ -1,0 +1,17 @@
+package com.google.android.gms.auth.api.signin;
+
+import android.os.Bundle;
+import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.internal.Hide;
+import java.util.List;
+
+public interface GoogleSignInOptionsExtension {
+    @Hide
+    int getExtensionType();
+
+    @Hide
+    List<Scope> getImpliedScopes();
+
+    @Hide
+    Bundle toBundle();
+}
