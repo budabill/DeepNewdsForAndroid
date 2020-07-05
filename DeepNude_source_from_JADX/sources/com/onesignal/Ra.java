@@ -1,18 +1,17 @@
 package com.onesignal;
 
-import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.onesignal.sa.C0650i;
 
-class Ra extends Pa {
-    Ra() {
+class ra implements Runnable {
+    ra() {
     }
 
-    /* renamed from: a */
-    String mo1747a(String str) {
-        return GoogleCloudMessaging.getInstance(sa.f1380f).register(str);
-    }
-
-    /* renamed from: c */
-    String mo1748c() {
-        return GoogleCloudMessaging.INSTANCE_ID_SCOPE;
+    public void run() {
+        try {
+            sa.m1635T();
+            ua.m1747a(sa.f1380f, sa.f1377c, sa.f1383i, C0875d.m2259a());
+        } catch (Throwable e) {
+            sa.m1657a(C0650i.FATAL, "FATAL Error registering device!", e);
+        }
     }
 }

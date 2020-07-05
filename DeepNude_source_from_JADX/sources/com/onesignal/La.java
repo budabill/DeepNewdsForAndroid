@@ -1,15 +1,21 @@
 package com.onesignal;
 
-import android.content.Context;
+import com.onesignal.C0582B.C0577a;
+import com.onesignal.C0582B.C0579d;
+import com.onesignal.C0582B.C0581f;
 
-public interface La {
-
-    /* renamed from: com.onesignal.La$a */
-    public interface C0596a {
-        /* renamed from: a */
-        void mo1392a(String str, int i);
+class la implements C0579d {
+    la() {
     }
 
     /* renamed from: a */
-    void mo1363a(Context context, String str, C0596a c0596a);
+    public void mo1352a(C0581f c0581f) {
+        sa.f1354F = c0581f;
+        sa.f1351C = true;
+        sa.m1634S();
+    }
+
+    public C0577a getType() {
+        return C0577a.STARTUP;
+    }
 }

@@ -1,31 +1,16 @@
 package com.onesignal;
 
-import android.content.ComponentName;
-import android.content.ServiceConnection;
-import android.os.IBinder;
-import java.lang.reflect.Method;
+import com.onesignal.za.C0664a;
 
-class Ya implements ServiceConnection {
+class ya implements Runnable {
     /* renamed from: a */
-    final /* synthetic */ ab f1236a;
+    final /* synthetic */ C0664a f1412a;
 
-    Ya(ab abVar) {
-        this.f1236a = abVar;
+    ya(C0664a c0664a) {
+        this.f1412a = c0664a;
     }
 
-    public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-        try {
-            Method a = ab.m1478c(Class.forName("com.android.vending.billing.IInAppBillingService$Stub"));
-            a.setAccessible(true);
-            this.f1236a.f1247d = a.invoke(null, new Object[]{iBinder});
-            this.f1236a.m1479c();
-        } catch (Throwable th) {
-            th.printStackTrace();
-        }
-    }
-
-    public void onServiceDisconnected(ComponentName componentName) {
-        ab.f1244a = -99;
-        this.f1236a.f1247d = null;
+    public void run() {
+        this.f1412a.m1763b();
     }
 }

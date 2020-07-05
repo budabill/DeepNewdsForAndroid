@@ -1,19 +1,21 @@
 package com.onesignal;
 
-import com.onesignal.Ga.C0589a;
+import com.onesignal.sa.C0647f;
+import com.onesignal.sa.C0650i;
 
-class Ca implements Runnable {
+class ca implements Runnable {
     /* renamed from: a */
-    final /* synthetic */ String f1100a;
-    /* renamed from: b */
-    final /* synthetic */ C0589a f1101b;
+    final /* synthetic */ C0647f f1264a;
 
-    Ca(String str, C0589a c0589a) {
-        this.f1100a = str;
-        this.f1101b = c0589a;
+    ca(C0647f c0647f) {
+        this.f1264a = c0647f;
     }
 
     public void run() {
-        Ga.m1331c(this.f1100a, null, null, this.f1101b, 60000);
+        if (this.f1264a == null) {
+            sa.m1656a(C0650i.ERROR, "getTagsHandler is null!");
+        } else if (sa.m1616A() != null) {
+            sa.m1685c(sa.f1359K);
+        }
     }
 }
